@@ -14,13 +14,14 @@ colours = ['blueviolet','mediumvioletred','turquoise','teal','deeppink',
 # choose data sets (indexed 0-99)
 data_sets = np.arange(100)
 num_sets = len(data_sets)
-
-# prepare metrics (subset of ['GaPP-Class','GaPP-ReaCtion','DiGiT','MP-IMM','MP-CV','GM-PHD','GNN-CV'])
 methods = ['GaPP-ReaCtion','GaPP-Class','DiGiT','MP-IMM','MP-CV','GM-PHD','GNN-CV']
-num_methods = len(methods)
+    # subset of ['GaPP-Class','GaPP-ReaCtion','DiGiT','MP-IMM','MP-CV','GM-PHD','GNN-CV']
+
+# prepare metrics
 metric_names = ['C','A','S','PA','mR','GOSPA','s2','γ','µ0','µi','Ci'] # mR = milli-R = R/1000
 num_std_metrics = 6
 num_metrics = len(metric_names)
+num_methods = len(methods)
 metrics = np.full([num_sets,num_methods,num_metrics],np.nan)
 
 # choices

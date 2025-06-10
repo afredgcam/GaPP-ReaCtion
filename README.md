@@ -27,7 +27,7 @@ Python code for the proposed methods in "Integrated Gaussian Processes for Robus
 * `wanting_each_plot = True` plots every time step for each data set
 * `num_sets` is the number of sets to generate (`=100` without changing the seed in `functions.py` yields those used in the above paper) 
 
-–––––––––––––––
+***
 
 ### File `functions.py`
 
@@ -35,7 +35,7 @@ Further details about the proposed methods and / or metrics may be found in thei
 
 **Note:** The random seed *for all* files or functions is atop this script. To recover anything, e.g., data sets, (if possible – see note below), this should be `rng = np.random.default_rng(seed=28)`
 
-–––––––––––––––
+***
 
 ### File `gapp_class_pooled.py`
 #### Main 'Inputs'
@@ -52,14 +52,40 @@ Further details about the proposed methods and / or metrics may be found in thei
 * Hyperparameter plotting or saving require more steps than regular filtering, and so *significantly* increase run-time
 * Due to parallelisation, exact replication is not possible by fixing the random seed
 
-–––––––––––––––
+***
 
 ### File `gapp_reaction_pooled.py`
 
 This is identical to `gapp_class_pooled.py` except for an additional lines for the 'revival' step
 
-–––––––––––––––
+***
 
-### File `gm-phd.py`
+### File `gm_phd.py`
 #### Main 'Inputs'
-* 
+* `data_sets` is a list / array of indices for the sets on which inference is sought
+* `saving_results = True` computes metrics and saves them and estimated trajectories 
+* `wanting_main_plot = True` plots the trajectories / ground truths / data for all time steps (must have `saving_results = True`; if overwriting undesired, use temporary file name)
+* Parameters and design choices, e.g., CV driving noise variance, prune threshold, etc.
+
+***
+
+### File `gnn_cv.py`
+
+Same as above, except with different, model-specific, parameters
+
+***
+
+### File `view_data_sets.py`
+#### Main 'Inputs'
+* `data_sets` is a list / array of indices for the sets whose plots are sought
+* `scale_factor` scales the final plot
+
+***
+
+### File `view_results.py`
+#### Main 'Inputs'
+* `data_sets` is a list / array of indices for the sets whose plots are sought
+* `methods` are the methods whose results are to be compared
+* `wanting_main_plot = True` plots the trajectories / ground truths / data for all time steps for each method separately
+* `scale_factor` scales the final plot
+
