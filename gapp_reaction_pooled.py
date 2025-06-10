@@ -105,7 +105,7 @@ for set_num in data_sets:
                 revival_mcmc_particles = p.map(revive,pf.particles)
                 pf.particles = revival_mcmc_particles
                 
-                # save filtering quantities (NOTE: 3x slower with this)
+                # save filtering quantities (NOTE: slower with this)
                 if wanting_hyperpar_plots or saving_results:
                     pf.save_filter()
                     pf.save_full()
