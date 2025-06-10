@@ -84,8 +84,8 @@ Same as above, except with different, model-specific, parameters
 
 ### File `view_results.py`
 #### Main 'Inputs'
-* `data_sets` is a list / array of indices for the sets whose plots are sought
-* `methods` are the methods whose results are to be compared
+* `data_sets` is a list / array of indices for the sets on which inferences are to be compared
+* `methods` are the method names whose results are to be compared
 * `wanting_main_plot = True` plots the trajectories / ground truths / data for all time steps for each method separately
 * `scale_factor` scales the final plot
 
